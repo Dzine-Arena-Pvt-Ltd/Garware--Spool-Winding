@@ -1,0 +1,74 @@
+{
+    "cam0": {
+        "serial_number": "40022418",
+        "camera_index": 0,
+        "settings": [
+            {
+                "min": 1,
+                "name": "resize",
+                "val": 88,
+                "max": 100
+            },
+            {
+                "min": 1,
+                "name": "resize2",
+                "val": 52,
+                "max": 100
+            },
+            {
+                "min": 1,
+                "name": "resize3",
+                "val": 66,
+                "max": 100
+            },
+            {
+                "min": 1,
+                "name": "canny_x",
+                "val": 147,
+                "max": 255
+            },
+            {
+                "min": 1,
+                "name": "canny_y",
+                "val": 158,
+                "max": 255
+            },
+            {
+                "min": 1,
+                "name": "line1_left",
+                "val": 1,
+                "max": 800
+            },
+            {
+                "min": 1,
+                "name": "line1_right",
+                "val": 695,
+                "max": 1000
+            },
+            {
+                "min": 1,
+                "name": "line2_left",
+                "val": 2,
+                "max": 1000
+            },
+            {
+                "min": 1,
+                "name": "line2_right",
+                "val": 692,
+                "max": 800
+            },
+            {
+                "min": 1,
+                "name": "line1_Y",
+                "val": 243,
+                "max": 1000
+            },
+            {
+                "min": 1,
+                "name": "line2_Y",
+                "val": 266,
+                "max": 1000
+            }
+        ]
+    }
+}

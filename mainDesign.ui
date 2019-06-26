@@ -1,0 +1,1918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1565</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>16</pointsize>
+    <italic>false</italic>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Visual Inspection Machine</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>ICONS/LOGO1.jpg</normaloff>ICONS/LOGO1.jpg</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="maximumSize">
+          <size>
+           <width>320</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}
+
+QToolButton{
+background-color:transparent;
+border:none;
+}
+
+QToolButton:hover{
+border-width: 2px;
+background-color:qlineargradient(spread:pad, x1:0.965, y1:0.04, x2:0.975773, y2:1, stop:0 rgba(214, 225, 239, 255));
+
+}
+
+QToolButton:checked{
+background-color:rgb(193,210,238);
+border-width: 1px;
+border-color:rgb(5, 54, 118);
+border-style: solid;
+}
+
+QTabWidget{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}
+
+QToolButton:checked{
+background-color:rgb(193,210,238);
+border-width: 1px;
+border-color:rgb(5, 54, 118);
+border-style: solid;
+
+}
+
+#QWidget#baselayer{
+background-color:rgb(255, 255, 255);
+}
+
+QWidget#vl_qwt_ProcessImgView{
+border-width: 0.5px;
+border-color:rgb(255, 85, 0);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}
+QWidget#controlBox{
+border-width: 0.5px;
+border-color:rgb(85, 170, 0);
+border-style: solid;
+border-radius:3px;
+background-color:rgb(255, 255, 255);
+}
+QGroupBox{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}
+
+
+
+QTabWidget::pane { 
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:transparent;
+
+}
+
+QTabBar {
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:transparent;
+}
+
+QTabBar::tab:selected{
+background-color:transparent;
+color:rgb(255, 0, 0);
+}
+QTabBar::tab:unselected{
+background-color:transparent;
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="Objects">
+          <attribute name="title">
+           <string>Objects</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="gp_object_tools">
+             <property name="minimumSize">
+              <size>
+               <width>280</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Object tools</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
+             </property>
+             <widget class="QToolButton" name="btn_start">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>50</y>
+                <width>61</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Start</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>ICONS/Play-icon.png</normaloff>ICONS/Play-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="btn_login">
+              <property name="geometry">
+               <rect>
+                <x>160</x>
+                <y>50</y>
+                <width>61</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>login</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>resources/icons/hand_stop.png</normaloff>resources/icons/hand_stop.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>22</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="gp_object_specification">
+             <property name="minimumSize">
+              <size>
+               <width>280</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Result</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
+             </property>
+             <widget class="QScrollArea" name="sa_reportCard">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>261</width>
+                <height>291</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>163</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>500</height>
+               </size>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>259</width>
+                 <height>289</height>
+                </rect>
+               </property>
+               <widget class="QLabel" name="lbl_mstrwdt">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>30</y>
+                  <width>141</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Part Width</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_tol">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>150</y>
+                  <width>101</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Tolerance +</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_mm1">
+                <property name="geometry">
+                 <rect>
+                  <x>220</x>
+                  <y>30</y>
+                  <width>61</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>mm</string>
+                </property>
+               </widget>
+               <widget class="QTextEdit" name="p_tolerance">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>150</y>
+                  <width>91</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;0.5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_mm">
+                <property name="geometry">
+                 <rect>
+                  <x>220</x>
+                  <y>150</y>
+                  <width>61</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>mm</string>
+                </property>
+               </widget>
+               <widget class="QTextEdit" name="val_mstrwdt">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>30</y>
+                  <width>91</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;000&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_mstrwdt_3">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>90</y>
+                  <width>141</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Actual Width</string>
+                </property>
+               </widget>
+               <widget class="QTextEdit" name="val_awdth">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>90</y>
+                  <width>91</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;246&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_mm_2">
+                <property name="geometry">
+                 <rect>
+                  <x>220</x>
+                  <y>90</y>
+                  <width>61</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>mm</string>
+                </property>
+               </widget>
+               <widget class="QTextEdit" name="n_tolerance">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>220</y>
+                  <width>91</width>
+                  <height>41</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;0.5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_mm_3">
+                <property name="geometry">
+                 <rect>
+                  <x>220</x>
+                  <y>220</y>
+                  <width>61</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>mm</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_tol_2">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>220</y>
+                  <width>91</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Tolerance -</string>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+             <widget class="QTextEdit" name="val_file_name">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>88</y>
+                <width>161</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt;FILE_NAME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_fname">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>90</y>
+                <width>81</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
+              <property name="text">
+               <string>Set</string>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="btn_manual">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>10</y>
+                <width>61</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Manual</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>ICONS/Industry-Manual-icon.png</normaloff>ICONS/Industry-Manual-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="btn_measure">
+              <property name="geometry">
+               <rect>
+                <x>160</x>
+                <y>10</y>
+                <width>71</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Measure</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>resources/icons/corner-resize-maximum-increase-vector-design-tool-36591f7d0275c6f4-512x512.png</normaloff>resources/icons/corner-resize-maximum-increase-vector-design-tool-36591f7d0275c6f4-512x512.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="Settings">
+          <attribute name="title">
+           <string>Settings</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Tools</string>
+             </property>
+             <widget class="QGroupBox" name="gpCameraTools">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>20</y>
+                <width>171</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Camera tools</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <widget class="QToolButton" name="btnCam_0">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>20</y>
+                 <width>141</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <italic>true</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>CAM0</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>ICONS/camera.png</normaloff>ICONS/camera.png</iconset>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextBesideIcon</enum>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QToolButton" name="btnBackup">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>150</y>
+                <width>51</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Backup</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>ICONS/Backup-Sync-icon.png</normaloff>ICONS/Backup-Sync-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="btnReload">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>150</y>
+                <width>51</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Reload</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>ICONS/Reload icon.png</normaloff>ICONS/Reload icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="btnTest">
+              <property name="geometry">
+               <rect>
+                <x>170</x>
+                <y>150</y>
+                <width>41</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>true</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Test</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>ICONS/test icon.png</normaloff>ICONS/test icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>18</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+             <widget class="QStackedWidget" name="swParameter">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>250</y>
+                <width>258</width>
+                <height>371</height>
+               </rect>
+              </property>
+              <property name="currentIndex">
+               <number>1</number>
+              </property>
+              <widget class="QWidget" name="parm_cam_0">
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="1" column="0">
+                 <widget class="QScrollArea" name="saCam_0">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="sawcsCam_0">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>238</width>
+                     <height>118</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_8">
+                    <item row="0" column="0">
+                     <widget class="QFrame" name="fmCamSample_0">
+                      <property name="minimumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QSlider" name="hsCamSample_0">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>20</y>
+                         <width>181</width>
+                         <height>29</height>
+                        </rect>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="lbCamSample_0">
+                       <property name="geometry">
+                        <rect>
+                         <x>30</x>
+                         <y>60</y>
+                         <width>171</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>#</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QGroupBox" name="gpSourceTools_0">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="title">
+                   <string>Source tools</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                  <widget class="QToolButton" name="btnRecord_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>160</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Record</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/Actions-media-record-icon.png</normaloff>ICONS/Actions-media-record-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                  <widget class="QToolButton" name="btnLive_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>100</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Live</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/Pause-Normal-Red-icon.png</normaloff>ICONS/Pause-Normal-Red-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                  <widget class="QToolButton" name="btnVideo_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>30</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Video</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/play-movies-icon.png</normaloff>ICONS/play-movies-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="parm_cam_1">
+               <layout class="QGridLayout" name="gridLayout_12">
+                <item row="0" column="0">
+                 <widget class="QGroupBox" name="gpSourceTools_1">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="title">
+                   <string>Source tools</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                  <widget class="QToolButton" name="btnRecord_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>160</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Record</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/Actions-media-record-icon.png</normaloff>ICONS/Actions-media-record-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                  <widget class="QToolButton" name="btnLive_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>100</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Live</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/Pause-Normal-Red-icon.png</normaloff>ICONS/Pause-Normal-Red-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                  <widget class="QToolButton" name="btnVideo_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>30</x>
+                     <y>30</y>
+                     <width>41</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <italic>true</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Video</string>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>ICONS/play-movies-icon.png</normaloff>ICONS/play-movies-icon.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>12</width>
+                     <height>12</height>
+                    </size>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                   <property name="toolButtonStyle">
+                    <enum>Qt::ToolButtonTextUnderIcon</enum>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QScrollArea" name="saCam_1">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="sawcsCam_1">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>238</width>
+                     <height>245</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gl_setting_cam_1">
+                    <item row="1" column="0">
+                     <widget class="QFrame" name="fmCamSample_1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QSlider" name="hsCamSample_1">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>20</y>
+                         <width>181</width>
+                         <height>29</height>
+                        </rect>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="lbCamSample_1">
+                       <property name="geometry">
+                        <rect>
+                         <x>30</x>
+                         <y>60</y>
+                         <width>171</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>#</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="parm_cam_2">
+               <layout class="QGridLayout" name="gridLayout_13">
+                <item row="1" column="0">
+                 <widget class="QScrollArea" name="saCam_2">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="sawcsCam_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>238</width>
+                     <height>224</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_10">
+                    <item row="1" column="0">
+                     <widget class="QFrame" name="fmCamSample_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>220</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QSlider" name="hsCamSample_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>20</y>
+                         <width>181</width>
+                         <height>29</height>
+                        </rect>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="lbCamSample_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>30</x>
+                         <y>60</y>
+                         <width>171</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>#</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QGroupBox" name="gpSourceTools_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="title">
+                       <string>Source tools</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                      </property>
+                      <widget class="QToolButton" name="btnVideo_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>30</y>
+                         <width>41</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                         <weight>50</weight>
+                         <italic>true</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Video</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>ICONS/play-movies-icon.png</normaloff>ICONS/play-movies-icon.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>12</width>
+                         <height>12</height>
+                        </size>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="autoExclusive">
+                        <bool>true</bool>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
+                       </property>
+                      </widget>
+                      <widget class="QToolButton" name="btnRecord_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>150</x>
+                         <y>30</y>
+                         <width>41</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                         <weight>50</weight>
+                         <italic>true</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Record</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>ICONS/Actions-media-record-icon.png</normaloff>ICONS/Actions-media-record-icon.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>12</width>
+                         <height>12</height>
+                        </size>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="autoExclusive">
+                        <bool>true</bool>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
+                       </property>
+                      </widget>
+                      <widget class="QToolButton" name="btnLive_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>90</x>
+                         <y>30</y>
+                         <width>41</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                         <weight>50</weight>
+                         <italic>true</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Live</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>ICONS/Pause-Normal-Red-icon.png</normaloff>ICONS/Pause-Normal-Red-icon.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>12</width>
+                         <height>12</height>
+                        </size>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="checked">
+                        <bool>false</bool>
+                       </property>
+                       <property name="autoExclusive">
+                        <bool>true</bool>
+                       </property>
+                       <property name="toolButtonStyle">
+                        <enum>Qt::ToolButtonTextUnderIcon</enum>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+             <widget class="QTextEdit" name="val_actol">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>110</y>
+                <width>71</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;0.5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_actol">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>110</y>
+                <width>141</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Actual Tol</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QStackedWidget" name="swView">
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="live_view">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="gbCam_0">
+          <property name="title">
+           <string>Camera-#</string>
+          </property>
+          <widget class="QLabel" name="lbCam_0">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>120</y>
+             <width>521</width>
+             <height>461</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>720</width>
+             <height>640</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>ICONS/LOGO1.jpg</pixmap>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lbl_mode">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>50</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>LIVE</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lbl_warning">
+           <property name="geometry">
+            <rect>
+             <x>640</x>
+             <y>110</y>
+             <width>291</width>
+             <height>471</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>720</width>
+             <height>640</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+border-width: 0.5px;
+border-color:rgb(213, 213, 213);
+border-style: solid;
+background-color:rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lbl_warn">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>50</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <italic>false</italic>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>WARNING WINDOW</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="test_view">
+       <widget class="QLabel" name="lb_test_1">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>220</y>
+          <width>451</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>640</width>
+          <height>480</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>img_1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_test_2">
+        <property name="geometry">
+         <rect>
+          <x>122</x>
+          <y>217</y>
+          <width>451</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>640</width>
+          <height>480</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>img_2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

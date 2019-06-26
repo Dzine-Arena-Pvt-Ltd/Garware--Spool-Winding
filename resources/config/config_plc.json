@@ -1,0 +1,16 @@
+
+
+{
+  "port":"COM3",
+  "dev_id"      : 1,
+  "start_reg"   : 4106,
+  "start_val"   : 1,
+  "stop_reg"    : 4106,
+  "stop_val"    : 0,
+  "m1_current_reg"    :4107,
+  "m2_current_reg"    :4108,
+  "spool_reg"    :4109
+}
+
+
+

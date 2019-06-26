@@ -1,0 +1,44 @@
+        "settings": [
+            {
+                "val": 3076,
+                "max": 10000,
+                "min": 100,
+                "name": "trigger_timeout"
+            },
+            {
+                "val": 42,
+                "max": 100,
+                "min": 1,
+                "name": "resize"
+            },
+            {
+                "val": 163,
+                "max": 500,
+                "min": 1,
+                "name": "y1"
+            },
+            {
+                "val": 175,
+                "max": 500,
+                "min": 1,
+                "name": "y2"
+            },
+            {
+                "val": 231,
+                "max": 500,
+                "min": 1,
+                "name": "x1"
+            },
+            {
+                "val": 463,
+                "max": 500,
+                "min": 1,
+                "name": "x2"
+            },
+            {
+                "val": 25,
+                "max": 100,
+                "min": 1,
+                "name": "FIOR"
+            }
+        ]
